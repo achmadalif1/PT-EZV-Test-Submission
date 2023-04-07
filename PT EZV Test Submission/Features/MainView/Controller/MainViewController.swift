@@ -86,6 +86,15 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate{
         cell.priceLabel.text = "Harga : $\(data[indexPath.row].price ?? -1)"
         guard let imageUrl = data[indexPath.row].thumbnail else{return cell}
         cell.thumbnailImageView.kf.setImage(with: URL(string: imageUrl))
+        var found = false
+        for id in UserPersistence.likeId{
+            if data[indexPath.row].id == id{
+                found = true
+            }
+        }
+        if found{
+            cell.likeButton.setImage(UIImage.init(named: "likeSelected"), for: .normal)
+        }else { cell.likeButton.setImage(UIImage.init(named: "likeUnSelected"), for: .normal)}
         
         return cell
     }
@@ -93,7 +102,15 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate{
         let vc = MainDetailViewController()
         guard let data = dataResult else{return}
         vc.data = data[indexPath.row]
+        vc.delegate = self
         self.navigationController?.present(vc, animated: true)
     }
     
+}
+extension MainViewController: MainDetailViewControllerDelegate{
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.listProductTableView.reloadData()
+        }
+    }
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MainDetailViewControllerDelegate {
+    func reloadData()
+}
+
 class MainDetailViewController: UIViewController {
     lazy var activityIndicator: UIActivityIndicatorView = {
       let activityIndicator = UIActivityIndicatorView()
@@ -22,6 +26,7 @@ class MainDetailViewController: UIViewController {
     
     @IBOutlet weak var likeButton: UIButton!
     var data: Product!
+    var delegate: MainDetailViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +42,7 @@ class MainDetailViewController: UIViewController {
     func setUpLikeView(){
         for id in UserPersistence.likeId{
             if data.id == id{
-                likeButton.setBackgroundImage(UIImage.init(named: "likeSelected"), for: .normal)
+                likeButton.setImage(UIImage.init(named: "likeSelected"), for: .normal)
             }
         }
     }
@@ -46,17 +51,20 @@ class MainDetailViewController: UIViewController {
         for id in UserPersistence.likeId{
             if data.id == id{
                 found = true
-                if let index = UserPersistence.likeId.firstIndex(of: id) {
-                    UserPersistence.likeId.remove(at: index)
-                }
             }
         }
         if found{
-            likeButton.setBackgroundImage(UIImage.init(named: "likeUnSelected"), for: .normal)
+            likeButton.setImage(UIImage.init(named: "likeUnSelected"), for: .normal)
+            if let index = UserPersistence.likeId.firstIndex(of: data.id!) {
+                UserPersistence.likeId.remove(at: index)
+            }
+            self.delegate?.reloadData()
+            
         }else{
-            likeButton.setBackgroundImage(UIImage.init(named: "likeSelected"), for: .normal)
+            likeButton.setImage(UIImage.init(named: "likeSelected"), for: .normal)
             guard let id = data.id else {return}
             UserPersistence.likeId.append(id)
+            self.delegate?.reloadData()
         }
     }
     func configureUI(){
