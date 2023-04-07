@@ -55,6 +55,8 @@ class MainDetailViewController: UIViewController {
             likeButton.setBackgroundImage(UIImage.init(named: "likeUnSelected"), for: .normal)
         }else{
             likeButton.setBackgroundImage(UIImage.init(named: "likeSelected"), for: .normal)
+            guard let id = data.id else {return}
+            UserPersistence.likeId.append(id)
         }
     }
     func configureUI(){
