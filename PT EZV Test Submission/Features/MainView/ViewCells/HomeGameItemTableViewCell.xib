@@ -39,62 +39,63 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="" image="likeUnSelected"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ppr-Vb-sR6">
-                                <rect key="frame" x="116" y="12" width="449" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="m7I-zu-6re">
+                                <rect key="frame" x="116" y="8" width="449" height="104"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XL5-K5-hj4">
-                                        <rect key="frame" x="0.0" y="0.0" width="449" height="36"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Daa-SX-W31">
+                                        <rect key="frame" x="0.0" y="0.0" width="408" height="12"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xhE-L1-Bji">
-                                                <rect key="frame" x="0.0" y="0.0" width="440" height="12"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Ori and The Blind Forest jhjgjhgjgjhgjg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj5-cG-Kya">
-                                                        <rect key="frame" x="0.0" y="0.0" width="216" height="12"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" text="4.8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crk-AZ-f64">
-                                                        <rect key="frame" x="224" y="0.0" width="216" height="12"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="10"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventure" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-bu-VSi">
-                                                <rect key="frame" x="0.0" y="12" width="49.5" height="12"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="12" id="2L4-sk-Pfv"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Ori and The Blind Forest jhjgjhgjgjhgjg" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u88-m3-Ijl">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubisoft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2F-VS-mw2">
-                                                <rect key="frame" x="0.0" y="24" width="35.5" height="12"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="4.8" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJG-1g-XAR">
+                                                <rect key="frame" x="208" y="0.0" width="200" height="12"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="12" id="t3q-zH-w1W"/>
+                                                    <constraint firstAttribute="width" constant="200" id="hxy-6p-WtF"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="qJG-1g-XAR" secondAttribute="trailing" id="pnt-NX-ZJp"/>
+                                        </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventure" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clm-6S-Ak8">
+                                        <rect key="frame" x="0.0" y="12" width="49.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="jMt-DR-NkZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubisoft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-bG-qEC">
+                                        <rect key="frame" x="0.0" y="92" width="35.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="9gK-xE-tbs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="SecondColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="h1Q-34-0kg" secondAttribute="bottom" constant="12" id="EY4-YI-Dxx"/>
+                            <constraint firstAttribute="bottom" secondItem="m7I-zu-6re" secondAttribute="bottom" constant="12" id="HTF-09-DVs"/>
                             <constraint firstItem="h1Q-34-0kg" firstAttribute="top" secondItem="koE-vu-3uG" secondAttribute="top" constant="12" id="Jgw-Qs-X9b"/>
-                            <constraint firstAttribute="bottom" secondItem="Ppr-Vb-sR6" secondAttribute="bottom" constant="12" id="UVt-5Y-RQk"/>
-                            <constraint firstAttribute="trailing" secondItem="Ppr-Vb-sR6" secondAttribute="trailing" constant="8" id="Xt2-nL-n9x"/>
+                            <constraint firstAttribute="trailing" secondItem="m7I-zu-6re" secondAttribute="trailing" constant="8" id="V3v-Fh-DfU"/>
+                            <constraint firstItem="m7I-zu-6re" firstAttribute="top" secondItem="koE-vu-3uG" secondAttribute="top" constant="8" id="ZDb-Rk-cgy"/>
                             <constraint firstItem="h1Q-34-0kg" firstAttribute="leading" secondItem="koE-vu-3uG" secondAttribute="leading" constant="8" id="arT-Oo-ucK"/>
-                            <constraint firstItem="Ppr-Vb-sR6" firstAttribute="top" secondItem="koE-vu-3uG" secondAttribute="top" constant="12" id="bGz-ic-awX"/>
-                            <constraint firstItem="Ppr-Vb-sR6" firstAttribute="leading" secondItem="h1Q-34-0kg" secondAttribute="trailing" constant="8" id="dZP-lP-MmS"/>
                             <constraint firstItem="5ka-OU-Pau" firstAttribute="top" secondItem="h1Q-34-0kg" secondAttribute="top" id="gek-Ba-ePY"/>
+                            <constraint firstItem="m7I-zu-6re" firstAttribute="leading" secondItem="h1Q-34-0kg" secondAttribute="trailing" constant="8" id="rK0-nh-XfH"/>
                             <constraint firstItem="5ka-OU-Pau" firstAttribute="leading" secondItem="h1Q-34-0kg" secondAttribute="leading" id="wc2-8d-Qxg"/>
                         </constraints>
                     </view>
@@ -111,14 +112,14 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="contentViewCell" destination="koE-vu-3uG" id="yKI-NN-YrK"/>
-                <outlet property="descriptionLabel" destination="aeK-bu-VSi" id="OqB-Iv-k6i"/>
+                <outlet property="descriptionLabel" destination="Clm-6S-Ak8" id="ETr-pZ-VoI"/>
                 <outlet property="likeButton" destination="5ka-OU-Pau" id="nt9-UI-jzT"/>
-                <outlet property="priceLabel" destination="n2F-VS-mw2" id="oJH-IN-pPH"/>
-                <outlet property="ratingLabel" destination="Crk-AZ-f64" id="5Ev-pT-eb1"/>
+                <outlet property="priceLabel" destination="Th6-bG-qEC" id="lZj-7F-pf0"/>
+                <outlet property="ratingLabel" destination="qJG-1g-XAR" id="6cn-EA-ZiG"/>
                 <outlet property="thumbnailImageView" destination="h1Q-34-0kg" id="4eR-4q-rk2"/>
-                <outlet property="titleLabel" destination="Nj5-cG-Kya" id="3Ag-r4-zl8"/>
+                <outlet property="titleLabel" destination="u88-m3-Ijl" id="FaJ-Eu-GfA"/>
             </connections>
-            <point key="canvasLocation" x="99.275362318840592" y="172.76785714285714"/>
+            <point key="canvasLocation" x="182" y="192"/>
         </tableViewCell>
     </objects>
     <resources>
